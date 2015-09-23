@@ -1,0 +1,54 @@
+The experiments have been carried out with a group of 30 volunteers within an age bracket of 19-48 years. 
+Each person performed six activities (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING) wearing a 
+smartphone (Samsung Galaxy S II) on the waist. Using its embedded accelerometer and gyroscope, we captured 3-axial 
+linear acceleration and 3-axial angular velocity at a constant rate of 50Hz. 
+The obtained dataset has been randomly partitioned into two sets, where 70% of the volunteers was selected for generating 
+the training data and 30% the test data. 
+
+The sensor signals (accelerometer and gyroscope) were pre-processed by applying noise filters and then sampled in 
+fixed-width sliding windows of 2.56 sec and 50% overlap (128 readings/window). The sensor acceleration signal, which has 
+gravitational and body motion components, was separated using a Butterworth low-pass filter into body acceleration and gravity. 
+The gravitational force is assumed to have only low frequency components, therefore a filter with 0.3 Hz cutoff frequency 
+was used. From each window, a vector of features was obtained by calculating variables from the time and frequency domain. 
+
+The dataset includes the following files:
+=========================================
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+- 'features.txt': List of all features.
+- 'activity_labels.txt': Links the class labels with their activity name.
+- 'train/X_train.txt': Training set.
+- 'train/y_train.txt': Training labels.
+- 'test/X_test.txt': Test set.
+- 'test/y_test.txt': Test labels.
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. 
+  Range is from 1 to 30. 
+- 'test/subject_test.txt': Each row identifies the subject who performed the activity for each window sample. 
+  Range is from 1 to 30. 
+
+Tasks performed in the R script are:
+# Set the path to the Test, Train, and Main file locations
+# Install package deplyr
+# Include deplyr package
+# Assign various file names to variables
+# Read the test X file
+# read the test y file
+# read the test subject file and assign column name
+# read the header file
+# cleanup header data by removing '()' & blank spaces.  Replace all ',' with '-'
+# Set the column name to header data of x test variable
+# read the train X file
+# read the train y file
+# read the train subject file and change the column name
+# Set the column name to header data of dataxtest
+# read the activity labels file
+# find activity lable for each y training set
+# Assign column names of the merged ytrainacts data 
+# Combine training x, y, and Subject datasets
+# find activity lable for each y test set
+# change the column names of the merged ytrainacts data 
+# combine test x,y and Subject data sets
+# combine final test and train data sets with only the needed columns mean, std, and activityName
+# convert Subject to a factor to support grouping
+# create the final tidy data vector pre ordered and grouped by Subject, ActivityName with calculated mean of all 
+  observed variables which have mean and std values
+# write the output to the text file
